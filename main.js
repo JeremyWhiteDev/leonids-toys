@@ -122,3 +122,4 @@ const playDoh30Pak = new Toy (6, "Play-Doh Case of Imagination", "Play-Doh", 16.
 // console.log(playDoh30Pak);
 
 console.log(toys);
+
