@@ -1,7 +1,7 @@
 //Toy constructor
 
 class Toy {
-    constructor(id, name, maker, price, dimensions, weight, category, upc) {
+    constructor(id, name, maker, price, dimensions, weight, category, upc, stock) {
         this.id = id;
         this.name = name;
         this.maker = maker;
@@ -10,6 +10,7 @@ class Toy {
         this.weight = weight;
         this.category = category;
         this.upc = upc;
+        this.stock = stock;
         toys.push(this);
     }
 }
@@ -25,7 +26,8 @@ const legoMilleniumFalcon = {
     dimensions: [33, 22, 8],
     weight: 30.5,
     category: "Puzzle",
-    upc: 75192
+    upc: 75192,
+    stock: 6
 };
 
 const ticketToRide = {
@@ -36,7 +38,8 @@ const ticketToRide = {
     dimensions: [11.75, 11.75, 3],
     weight: 3.2,
     category: "Board Game",
-    upc: 824968717912
+    upc: 824968717912,
+    stock: 15
 };
 
 const xBoxSeriesX = {
@@ -47,7 +50,8 @@ const xBoxSeriesX = {
     dimensions: [11.5, 8.5, 15],
     weight: 15,
     category: "Video Game",
-    upc: 889842640724
+    upc: 889842640724,
+    stock: 5
 };
 
 //create array
@@ -74,7 +78,8 @@ const playStation5 = {
     dimensions: [17, 18.5, 7],
     weight: 15,
     category: "Video Game",
-    upc: 711719541028
+    upc: 711719541028,
+    stock: 27
 };
 
 const goodNightMoon = {
@@ -85,7 +90,8 @@ const goodNightMoon = {
     volume: [12, 12, 0.5],
     weight: 1,
     category: "Book",
-    upc: 9780694003617
+    upc: 9780694003617,
+    stock: 100
 };
 
 // Push toys to current array
@@ -123,3 +129,15 @@ const playDoh30Pak = new Toy (6, "Play-Doh Case of Imagination", "Play-Doh", 16.
 
 console.log(toys);
 
+
+
+// calculate how many toys can fit on a shelf given a specific width..
+
+// we need to a) find a products width, b) compare that width with the remaining width on the shelf. c) if the shelf width is more than the product width, add number on shelf +1, and subtract the current width from the total. else do nothing. outside of loop, log how many items are on shelf and how much space is left.
+
+
+
+
+let shelfWidth = 96;
+
+let countOfItems = 0;
